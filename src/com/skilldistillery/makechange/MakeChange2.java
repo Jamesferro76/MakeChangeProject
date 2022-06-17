@@ -2,7 +2,7 @@ package com.skilldistillery.makechange;
 
 import java.util.Scanner;
 
-public class MakeChange {
+public class MakeChange2 {
 
 	public static void main(String[] args) {
 
@@ -40,48 +40,45 @@ public class MakeChange {
 		bill20 = bill10 = bill5 = bill1 = quarter = dime = nickle = penny = 0;
 
 		double originalTendered = tendered;
-		double originalItemCost= itemCost;
-		
 
-//		To avoid double inaccuracy tender and itemCost will be multiplied by 100
-		tendered*=100;
-		itemCost*=100;
-		
+		System.out.println(tendered);
+		System.out.println(itemCost);
+
 		while (tendered >= itemCost) {
-			double changeLeftOver = (tendered) - (itemCost);
+			double changeLeftOver = tendered - itemCost;
 
-			if (changeLeftOver >= 2000) {
+			if (changeLeftOver >= 20.00) {
 				bill20 = bill20 + 1;
-				tendered = tendered - 2000;
+				tendered = tendered - 20;
 
-			} else if (changeLeftOver >= 1000 && changeLeftOver < 2000) {
+			} else if (changeLeftOver >= 10 && changeLeftOver < 20) {
 				bill10++;
-				tendered = tendered - 1000;
-			} else if (changeLeftOver >= 500 && changeLeftOver < 1000) {
+				tendered = tendered - 10;
+			} else if (changeLeftOver >= 5 && changeLeftOver < 10) {
 				bill5++;
-				tendered -= 500;
-			} else if (changeLeftOver >= 100 && changeLeftOver < 500) {
+				tendered -= 5;
+			} else if (changeLeftOver >= 1 && changeLeftOver < 5) {
 				bill1++;
-				tendered -= 100;
-			} else if (changeLeftOver >= 25 && changeLeftOver < 100) {
+				tendered -= 1;
+			} else if (changeLeftOver >= .25 && changeLeftOver < 1) {
 				quarter++;
-				tendered -= 25;
-			} else if (changeLeftOver >= 10 && changeLeftOver < 25) {
+				tendered -= .25;
+			} else if (changeLeftOver >= .10 && changeLeftOver < .25) {
 				dime++;
-				tendered -= 10;
-			} else if (changeLeftOver >= 05 && changeLeftOver < 10) {
+				tendered -= .10;
+			} else if (changeLeftOver >= .05 && changeLeftOver < .10) {
 				nickle++;
-				tendered -= 05;
-			} else if (changeLeftOver >= 01 && changeLeftOver < 05) {
+				tendered -= .05;
+			} else if (changeLeftOver >= .01 && changeLeftOver < .05) {
 				penny++;
-				tendered -= 01;
+				tendered -= .01;
 			} else {
 //				System.out.println("Amount: " + itemCost + ", Tendered: " + originalTendered + ", Result: " + bill20
 //						+ " Twenty dollar bills, " + bill10 + " Ten dollar bills, " + bill5 + " Five dollar bills, "
 //						+ bill1 + " One dollar bills, " + quarter + " quarters, " + dime + " dimes, " + nickle
 //						+ " nickles, " + penny + " pennies");
 				
-				System.out.print("Amount: "+ originalItemCost + ", Tendered: " + originalTendered + ", Change: ");
+				
 				
 				printOutChange(bill20, bill10, bill5, bill1, quarter, dime, nickle, penny);
 				break;
@@ -96,7 +93,7 @@ public class MakeChange {
 		if(bill20>=2) {
 			System.out.print(bill20 + " Twenty dollar bills, ");
 		} else if(bill20==1) {
-			System.out.print(bill20 + " Twenty dollar bill, ");
+			System.out.print(bill20 + " Twenty dollar bill,");
 		}
 		if(bill10>=2) {
 			System.out.print(bill10 + " Ten dollar bills, ");
