@@ -31,6 +31,7 @@ public class MakeChange {
 			System.out.println("You do not have enough money to purchase this item.");
 			break;
 		}
+		sc.close();
 
 	}
 
