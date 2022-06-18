@@ -30,8 +30,11 @@ public class MakeChange2 {
 		case "NotEnough":
 			System.out.println("You do not have enough money to purchase this item.");
 			break;
+			
+			
 		}
 
+		sc.close();
 	}
 
 	public static void changeForCustomer(double tendered, double itemCost) {
