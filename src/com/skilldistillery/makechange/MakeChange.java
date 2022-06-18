@@ -52,12 +52,11 @@ public class MakeChange {
 			double changeLeftOver = (tendered) - (itemCost);
 
 			if (changeLeftOver >= 2000) {
-				bill20 = bill20 + 1;
-				tendered = tendered - 2000;
-
+				bill20++;
+				tendered -= 2000;
 			} else if (changeLeftOver >= 1000 && changeLeftOver < 2000) {
 				bill10++;
-				tendered = tendered - 1000;
+				tendered -= 1000;
 			} else if (changeLeftOver >= 500 && changeLeftOver < 1000) {
 				bill5++;
 				tendered -= 500;
