@@ -28,6 +28,7 @@ if the customer doesn't need a 20 it moves to the next bill.
 
 etc.
 
+Additionally I added an extra method that would ask the user if they would like to do another transaction to help with testing. This method was just another while loop and switch statement. I did need to use a method that could receive information such as my scanner and return information.
 
 ##What I Learned
 
