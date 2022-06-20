@@ -137,11 +137,11 @@ public class MakeChange {
 			System.out.print(nickle + " Nickle, ");
 		}
 		if (penny >= 2) {
-			System.out.print(penny + " Pennies.");
+			System.out.print(penny + " Pennies.\n");
 		} else if (penny == 1) {
-			System.out.print(penny + " Penny.");
+			System.out.print(penny + " Penny.\n");
 		} else {
-			System.out.print(".");
+			System.out.print(".\n");
 		}
 
 	}
@@ -167,6 +167,7 @@ public class MakeChange {
 			case "n":
 				x = 1;
 				y = 1;
+				System.out.println("Goodbye.");
 				break;
 			default:
 				System.out.println("That was not a readable response.");
